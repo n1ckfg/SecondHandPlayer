@@ -1,0 +1,3 @@
+[submodule "Assets/UnityToolbox"]
+	path = Assets/UnityToolbox
+	url = https://github.com/n1ckfg/UnityToolbox
