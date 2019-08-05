@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 0e5275c1062a9514494f5524d5a5ce06
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: HTR:LArm
+    100002: HTR:LArm_End
+    100004: HTR:LIndexCarpal
+    100006: HTR:LIndexPhalange1
+    100008: HTR:LIndexPhalange2
+    100010: HTR:LIndexPhalange3
+    100012: HTR:LIndexPhalange3_End
+    100014: HTR:LMiddePhalange2
+    100016: HTR:LMiddleCarpal
+    100018: HTR:LMiddlePhalange1
+    100020: HTR:LMiddlePhalange3
+    100022: HTR:LMiddlePhalange3_End
+    100024: HTR:LPinkyCarpal
+    100026: HTR:LPinkyPhalange1
+    100028: HTR:LPinkyPhalange2
+    100030: HTR:LPinkyPhalange3
+    100032: HTR:LPinkyPhalange3_End
+    100034: HTR:LRingCarpal
+    100036: HTR:LRingPhalange1
+    100038: HTR:LRingPhalange2
+    100040: HTR:LRingPhalange3
+    100042: HTR:LRingPhalange3_End
+    100044: HTR:LThumbMetacarpal
+    100046: HTR:LThumbPhalange1
+    100048: HTR:LThumbPhalange2
+    100050: HTR:LThumbPhalange2_End
+    100052: HTR:LWrist
+    100054: HTR:RArm
+    100056: HTR:RArm_End
+    100058: HTR:RIndexCarpal
+    100060: HTR:RIndexPhalange1
+    100062: HTR:RIndexPhalange2
+    100064: HTR:RIndexPhalange3
+    100066: HTR:RIndexPhalange3_End
+    100068: HTR:RMiddleCarpal
+    100070: HTR:RMiddlePhalange1
+    100072: HTR:RMiddlePhalange2
+    100074: HTR:RMiddlePhalange3
+    100076: HTR:RMiddlePhalange3_End
+    100078: HTR:RPinkyCarpal
+    100080: HTR:RPinkyPhalange1
+    100082: HTR:RPinkyPhalange2
+    100084: HTR:RPinkyPhalange3
+    100086: HTR:RPinkyPhalange3_End
+    100088: HTR:RRingCarpal
+    100090: HTR:RRingPhalange1
+    100092: HTR:RRingPhalange2
+    100094: HTR:RRingPhalange3
+    100096: HTR:RRingPhalange3_End
+    100098: HTR:RThumbMetacarpal
+    100100: HTR:RThumbPhalange1
+    100102: HTR:RThumbPhalange2
+    100104: HTR:RThumbPhalange2_End
+    100106: HTR:RWrist
+    100108: //RootNode
+    400000: HTR:LArm
+    400002: HTR:LArm_End
+    400004: HTR:LIndexCarpal
+    400006: HTR:LIndexPhalange1
+    400008: HTR:LIndexPhalange2
+    400010: HTR:LIndexPhalange3
+    400012: HTR:LIndexPhalange3_End
+    400014: HTR:LMiddePhalange2
+    400016: HTR:LMiddleCarpal
+    400018: HTR:LMiddlePhalange1
+    400020: HTR:LMiddlePhalange3
+    400022: HTR:LMiddlePhalange3_End
+    400024: HTR:LPinkyCarpal
+    400026: HTR:LPinkyPhalange1
+    400028: HTR:LPinkyPhalange2
+    400030: HTR:LPinkyPhalange3
+    400032: HTR:LPinkyPhalange3_End
+    400034: HTR:LRingCarpal
+    400036: HTR:LRingPhalange1
+    400038: HTR:LRingPhalange2
+    400040: HTR:LRingPhalange3
+    400042: HTR:LRingPhalange3_End
+    400044: HTR:LThumbMetacarpal
+    400046: HTR:LThumbPhalange1
+    400048: HTR:LThumbPhalange2
+    400050: HTR:LThumbPhalange2_End
+    400052: HTR:LWrist
+    400054: HTR:RArm
+    400056: HTR:RArm_End
+    400058: HTR:RIndexCarpal
+    400060: HTR:RIndexPhalange1
+    400062: HTR:RIndexPhalange2
+    400064: HTR:RIndexPhalange3
+    400066: HTR:RIndexPhalange3_End
+    400068: HTR:RMiddleCarpal
+    400070: HTR:RMiddlePhalange1
+    400072: HTR:RMiddlePhalange2
+    400074: HTR:RMiddlePhalange3
+    400076: HTR:RMiddlePhalange3_End
+    400078: HTR:RPinkyCarpal
+    400080: HTR:RPinkyPhalange1
+    400082: HTR:RPinkyPhalange2
+    400084: HTR:RPinkyPhalange3
+    400086: HTR:RPinkyPhalange3_End
+    400088: HTR:RRingCarpal
+    400090: HTR:RRingPhalange1
+    400092: HTR:RRingPhalange2
+    400094: HTR:RRingPhalange3
+    400096: HTR:RRingPhalange3_End
+    400098: HTR:RThumbMetacarpal
+    400100: HTR:RThumbPhalange1
+    400102: HTR:RThumbPhalange2
+    400104: HTR:RThumbPhalange2_End
+    400106: HTR:RWrist
+    400108: //RootNode
+    7400000: Loops2
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

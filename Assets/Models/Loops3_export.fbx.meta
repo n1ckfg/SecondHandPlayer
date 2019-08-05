@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 9056b4f07030e4d4192ef77074ef422f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: LArm
+    100002: LArm_End
+    100004: LIndexCarpal
+    100006: LIndexPhalange1
+    100008: LIndexPhalange2
+    100010: LIndexPhalange3
+    100012: LIndexPhalange3_End
+    100014: LMiddePhalange2
+    100016: LMiddleCarpal
+    100018: LMiddlePhalange1
+    100020: LMiddlePhalange3
+    100022: LMiddlePhalange3_End
+    100024: //RootNode
+    100026: LPinkyCarpal
+    100028: LPinkyPhalange1
+    100030: LPinkyPhalange2
+    100032: LPinkyPhalange3
+    100034: LPinkyPhalange3_End
+    100036: LRingCarpal
+    100038: LRingPhalange1
+    100040: LRingPhalange2
+    100042: LRingPhalange3
+    100044: LRingPhalange3_End
+    100046: LThumbMetacarpal
+    100048: LThumbPhalange1
+    100050: LThumbPhalange2
+    100052: LThumbPhalange2_End
+    100054: LWrist
+    100056: RArm
+    100058: RArm_End
+    100060: RIndexCarpal
+    100062: RIndexPhalange1
+    100064: RIndexPhalange2
+    100066: RIndexPhalange3
+    100068: RIndexPhalange3_End
+    100070: RMiddleCarpal
+    100072: RMiddlePhalange1
+    100074: RMiddlePhalange2
+    100076: RMiddlePhalange3
+    100078: RMiddlePhalange3_End
+    100080: RPinkyCarpal
+    100082: RPinkyPhalange1
+    100084: RPinkyPhalange2
+    100086: RPinkyPhalange3
+    100088: RPinkyPhalange3_End
+    100090: RRingCarpal
+    100092: RRingPhalange1
+    100094: RRingPhalange2
+    100096: RRingPhalange3
+    100098: RRingPhalange3_End
+    100100: RThumbMetacarpal
+    100102: RThumbPhalange1
+    100104: RThumbPhalange2
+    100106: RThumbPhalange2_End
+    100108: RWrist
+    400000: LArm
+    400002: LArm_End
+    400004: LIndexCarpal
+    400006: LIndexPhalange1
+    400008: LIndexPhalange2
+    400010: LIndexPhalange3
+    400012: LIndexPhalange3_End
+    400014: LMiddePhalange2
+    400016: LMiddleCarpal
+    400018: LMiddlePhalange1
+    400020: LMiddlePhalange3
+    400022: LMiddlePhalange3_End
+    400024: //RootNode
+    400026: LPinkyCarpal
+    400028: LPinkyPhalange1
+    400030: LPinkyPhalange2
+    400032: LPinkyPhalange3
+    400034: LPinkyPhalange3_End
+    400036: LRingCarpal
+    400038: LRingPhalange1
+    400040: LRingPhalange2
+    400042: LRingPhalange3
+    400044: LRingPhalange3_End
+    400046: LThumbMetacarpal
+    400048: LThumbPhalange1
+    400050: LThumbPhalange2
+    400052: LThumbPhalange2_End
+    400054: LWrist
+    400056: RArm
+    400058: RArm_End
+    400060: RIndexCarpal
+    400062: RIndexPhalange1
+    400064: RIndexPhalange2
+    400066: RIndexPhalange3
+    400068: RIndexPhalange3_End
+    400070: RMiddleCarpal
+    400072: RMiddlePhalange1
+    400074: RMiddlePhalange2
+    400076: RMiddlePhalange3
+    400078: RMiddlePhalange3_End
+    400080: RPinkyCarpal
+    400082: RPinkyPhalange1
+    400084: RPinkyPhalange2
+    400086: RPinkyPhalange3
+    400088: RPinkyPhalange3_End
+    400090: RRingCarpal
+    400092: RRingPhalange1
+    400094: RRingPhalange2
+    400096: RRingPhalange3
+    400098: RRingPhalange3_End
+    400100: RThumbMetacarpal
+    400102: RThumbPhalange1
+    400104: RThumbPhalange2
+    400106: RThumbPhalange2_End
+    400108: RWrist
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
