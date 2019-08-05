@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dance_60hz_final
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 31cbf0b59cf6d1244a06896e430b5f40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 31cbf0b59cf6d1244a06896e430b5f40, type: 3}
       propertyPath: m_IsActive
       value: 0
