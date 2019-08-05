@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd59d474682c91e48b9bef4bf4f08eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabJoint: {fileID: 891656825838147619, guid: 2c9f99d1dd13b98449c31b1d2a96fe4c,
+  prefabJoint: {fileID: 4560354956512380918, guid: 81bd94de32a923f4dafc1399d57b4d42,
     type: 3}
   debug: 1
   scale: 0.1
