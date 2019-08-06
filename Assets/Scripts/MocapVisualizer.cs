@@ -5,7 +5,6 @@ using UnityEngine;
 public class MocapVisualizer : MonoBehaviour {
 
     public MocapJoint prefabJoint;
-    public bool debug = true;
     public float scale = 1f;
 
     [HideInInspector] public List<Transform> allTransforms = new List<Transform>();
@@ -16,8 +15,9 @@ public class MocapVisualizer : MonoBehaviour {
 
         foreach (Transform child in allTransforms) { 
             MocapJoint joint = Instantiate(prefabJoint, Vector3.zero, Quaternion.identity).GetComponent<MocapJoint>();
-            joint.setDebug(debug, scale);
             joint.target = child;
+            joint.parentTarget = child.parent;
+            joint.init(scale);
             joints.Add(joint);
         }
     }
