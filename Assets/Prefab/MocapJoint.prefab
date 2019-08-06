@@ -47,7 +47,6 @@ MonoBehaviour:
   target: {fileID: 0}
   ren: {fileID: 2595576089713099307}
   scale: 1
-  debug: 1
   parentTarget: {fileID: 0}
 --- !u!1 &7235367955209570609
 GameObject:

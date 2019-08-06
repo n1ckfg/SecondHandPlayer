@@ -6,6 +6,7 @@ public class MocapVisualizer : MonoBehaviour {
 
     public MocapJoint prefabJoint;
     public float scale = 1f;
+    public bool ready = false;
 
     [HideInInspector] public List<Transform> allTransforms = new List<Transform>();
     [HideInInspector] public List<MocapJoint> joints;
@@ -20,6 +21,8 @@ public class MocapVisualizer : MonoBehaviour {
             joint.init(scale);
             joints.Add(joint);
         }
+
+        ready = true;
     }
 
     public void getTransformsFromHierarchy(Transform parent) {
