@@ -23,7 +23,11 @@ public class MocapOscHandler : MonoBehaviour {
         for (int i=0; i<mocapVisualizers.Length; i++) { 
             if (mocapVisualizers[i].ready) {
                 foreach (Transform child in mocapVisualizers[i].allTransforms) {
-                    OSCHandler.Instance.SendMessageToClient("myClient", "/" + child.name, child.position.x);
+                    List<object> msg = new List<object>();
+                    msg.Add(child.position.x);
+                    msg.Add(child.position.y);
+                    msg.Add(child.position.z);
+                    OSCHandler.Instance.SendMessageToClient("myClient", "/" + child.name, msg);
                 }
             }
         }
