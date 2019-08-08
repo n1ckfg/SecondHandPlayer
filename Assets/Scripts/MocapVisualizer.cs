@@ -6,6 +6,7 @@ public class MocapVisualizer : MonoBehaviour {
 
     public MocapJoint prefabJoint;
     public float scale = 1f;
+    public bool useTags = true;
     public string tagName = "OSC";
     public bool ready = false;
 
@@ -15,7 +16,11 @@ public class MocapVisualizer : MonoBehaviour {
 
     private void Start() {
         getTransformsFromHierarchy(transform);
-        getTaggedTransforms();
+        if (useTags) {
+            getTaggedTransforms();
+        } else {
+            taggedTransforms = allTransforms;
+        }
 
         foreach (Transform child in allTransforms) { 
             MocapJoint joint = Instantiate(prefabJoint, Vector3.zero, Quaternion.identity).GetComponent<MocapJoint>();
