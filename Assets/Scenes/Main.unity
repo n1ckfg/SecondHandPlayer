@@ -361,6 +361,22 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b50644ed7f049a242a1c7bf8f99c3bd7, type: 2}
+    - target: {fileID: 100002, guid: ee4fb1d95743393438e60e55bd650a16, type: 3}
+      propertyPath: m_TagString
+      value: OSC
+      objectReference: {fileID: 0}
+    - target: {fileID: 100058, guid: ee4fb1d95743393438e60e55bd650a16, type: 3}
+      propertyPath: m_TagString
+      value: OSC
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ee4fb1d95743393438e60e55bd650a16, type: 3}
+      propertyPath: m_TagString
+      value: OSC
+      objectReference: {fileID: 0}
+    - target: {fileID: 100068, guid: ee4fb1d95743393438e60e55bd650a16, type: 3}
+      propertyPath: m_TagString
+      value: OSC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee4fb1d95743393438e60e55bd650a16, type: 3}
 --- !u!1 &617952364 stripped
@@ -384,8 +400,10 @@ MonoBehaviour:
   prefabJoint: {fileID: 4560354956512380918, guid: 81bd94de32a923f4dafc1399d57b4d42,
     type: 3}
   scale: 0.1
+  tagName: OSC
   ready: 0
   allTransforms: []
+  taggedTransforms: []
   joints: []
 --- !u!1 &1254215904
 GameObject:

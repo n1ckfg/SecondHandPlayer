@@ -10,7 +10,7 @@ public class MocapOscHandler : MonoBehaviour {
 
     public string outIP = "127.0.0.1";
     public int outPort = 9999;
-    public MocapVisualizer[] mocapVisualizers;
+    public List<MocapVisualizer> mocapVisualizers = new List<MocapVisualizer>();
 
     private OSCServer myServer;
 
@@ -20,9 +20,9 @@ public class MocapOscHandler : MonoBehaviour {
     }
 
     private void Update() {
-        for (int i=0; i<mocapVisualizers.Length; i++) { 
+        for (int i=0; i<mocapVisualizers.Count; i++) { 
             if (mocapVisualizers[i].ready) {
-                foreach (Transform child in mocapVisualizers[i].allTransforms) {
+                foreach (Transform child in mocapVisualizers[i].taggedTransforms) {
                     List<object> msg = new List<object>();
                     msg.Add(child.position.x);
                     msg.Add(child.position.y);
