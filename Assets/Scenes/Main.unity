@@ -400,6 +400,7 @@ MonoBehaviour:
   prefabJoint: {fileID: 4560354956512380918, guid: 81bd94de32a923f4dafc1399d57b4d42,
     type: 3}
   scale: 0.1
+  useTags: 1
   tagName: OSC
   ready: 0
   allTransforms: []
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013f0861296ef644d91095f11da34160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  channelFormat: 1
   outIP: 127.0.0.1
   outPort: 9999
   mocapVisualizers:
