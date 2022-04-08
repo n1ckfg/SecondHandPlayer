@@ -87,3 +87,22 @@ The following packages were updated:
   com.unity.textmeshpro from version 1.4.1 to 2.1.4
 The following packages were removed:
   com.unity.package-manager-ui@2.0.13
+
+=== Fri Apr  8 13:38:21 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.analytics from version 3.6.11 to 3.6.12
+  com.unity.collab-proxy from version 1.12.5 to 1.15.13
+  com.unity.ide.rider from version 1.2.1 to 2.0.7
+  com.unity.ide.visualstudio from version 2.0.11 to 2.0.14
+  com.unity.ide.vscode from version 1.2.4 to 1.2.5
+  com.unity.postprocessing from version 2.2.2 to 2.3.0
+  com.unity.purchasing from version 4.0.3 to 4.1.3
+  com.unity.render-pipelines.high-definition from version 7.3.1 to 10.8.1
+  com.unity.test-framework from version 1.1.29 to 1.1.31
+  com.unity.textmeshpro from version 2.1.4 to 3.0.6
+  com.unity.timeline from version 1.2.18 to 1.4.8
+  com.unity.xr.legacyinputhelpers from version 2.1.8 to 2.1.9
