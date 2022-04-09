@@ -1,6 +1,0 @@
-[submodule "Assets/UnityToolbox"]
-	path = Assets/UnityToolbox
-	url = https://github.com/n1ckfg/UnityToolbox
-[submodule "Assets/UnityOSC"]
-	path = Assets/UnityOSC
-	url = https://github.com/n1ckfg/UnityOSC
