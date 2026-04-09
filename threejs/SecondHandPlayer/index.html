@@ -90,7 +90,9 @@
         const groundGeometry = new THREE.PlaneGeometry(20, 20);
         const groundMaterial = new THREE.MeshStandardMaterial({
             color: 0x2a2a4a,
-            roughness: 0.8
+            roughness: 0.8,
+            transparent: true,
+            opacity: 0.5
         });
         const ground = new THREE.Mesh(groundGeometry, groundMaterial);
         ground.rotation.x = -Math.PI / 2;
@@ -106,6 +108,8 @@
         let mixer = null;
         const jointSpheres = [];
         const joints = [];
+        const boneLines = [];
+        const bonePairs = []; // [childJoint, parentJoint] pairs
 
         // Joint visualization material
         const jointMaterial = new THREE.MeshStandardMaterial({
@@ -117,11 +121,20 @@
         });
         const jointGeometry = new THREE.SphereGeometry(0.025, 16, 16);
 
+        // Line material for bone connections
+        const lineMaterial = new THREE.LineBasicMaterial({
+            color: 0x00ffaa,
+            linewidth: 2
+        });
+
         const loader = new GLTFLoader();
         loader.load(
             'files/Loops1_export.glb',
             (gltf) => {
                 model = gltf.scene;
+
+                // Map to track joint indices
+                const jointIndexMap = new Map();
 
                 // Traverse model to find bones and meshes
                 model.traverse((child) => {
@@ -133,6 +146,7 @@
                     }
                     // Create spheres for bones/joints
                     if (child.isBone || child.type === 'Bone') {
+                        jointIndexMap.set(child, joints.length);
                         joints.push(child);
                         const sphere = new THREE.Mesh(jointGeometry, jointMaterial);
                         sphere.castShadow = true;
@@ -145,6 +159,7 @@
                 if (joints.length === 0) {
                     model.traverse((child) => {
                         if (child.isObject3D && child.name && child !== model) {
+                            jointIndexMap.set(child, joints.length);
                             joints.push(child);
                             const sphere = new THREE.Mesh(jointGeometry, jointMaterial);
                             sphere.castShadow = true;
@@ -154,8 +169,21 @@
                     });
                 }
 
+                // Create lines connecting child bones to parent bones
+                for (const joint of joints) {
+                    if (joint.parent && jointIndexMap.has(joint.parent)) {
+                        bonePairs.push([joint, joint.parent]);
+                        const geometry = new THREE.BufferGeometry();
+                        const positions = new Float32Array(6); // 2 points * 3 coords
+                        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                        const line = new THREE.Line(geometry, lineMaterial);
+                        boneLines.push(line);
+                        scene.add(line);
+                    }
+                }
+
                 scene.add(model);
-                console.log(`Found ${joints.length} joints`);
+                console.log(`Found ${joints.length} joints, ${boneLines.length} connections`);
 
                 // Setup animation mixer if animations exist
                 if (gltf.animations && gltf.animations.length > 0) {
@@ -165,12 +193,12 @@
 
                     document.getElementById('info').innerHTML =
                         `SecondHandPlayer<br>` +
-                        `Joints: ${joints.length}<br>` +
+                        `Joints: ${joints.length} | Bones: ${boneLines.length}<br>` +
                         `Animations: ${gltf.animations.length}`;
                 } else {
                     document.getElementById('info').innerHTML =
                         `SecondHandPlayer<br>` +
-                        `Joints: ${joints.length}<br>` +
+                        `Joints: ${joints.length} | Bones: ${boneLines.length}<br>` +
                         `No animations found`;
                 }
 
@@ -192,6 +220,7 @@
         const clock = new THREE.Clock();
 
         const worldPos = new THREE.Vector3();
+        const parentPos = new THREE.Vector3();
 
         function animate() {
             requestAnimationFrame(animate);
@@ -206,6 +235,22 @@
             for (let i = 0; i < joints.length; i++) {
                 joints[i].getWorldPosition(worldPos);
                 jointSpheres[i].position.copy(worldPos);
+            }
+
+            // Update bone line positions
+            for (let i = 0; i < bonePairs.length; i++) {
+                const [child, parent] = bonePairs[i];
+                child.getWorldPosition(worldPos);
+                parent.getWorldPosition(parentPos);
+
+                const positions = boneLines[i].geometry.attributes.position.array;
+                positions[0] = worldPos.x;
+                positions[1] = worldPos.y;
+                positions[2] = worldPos.z;
+                positions[3] = parentPos.x;
+                positions[4] = parentPos.y;
+                positions[5] = parentPos.z;
+                boneLines[i].geometry.attributes.position.needsUpdate = true;
             }
 
             controls.update();
