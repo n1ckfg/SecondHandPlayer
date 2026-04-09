@@ -104,6 +104,18 @@
         // Load GLB model
         let model = null;
         let mixer = null;
+        const jointSpheres = [];
+        const joints = [];
+
+        // Joint visualization material
+        const jointMaterial = new THREE.MeshStandardMaterial({
+            color: 0x00ffaa,
+            emissive: 0x00ff88,
+            emissiveIntensity: 0.3,
+            roughness: 0.3,
+            metalness: 0.5
+        });
+        const jointGeometry = new THREE.SphereGeometry(0.025, 16, 16);
 
         const loader = new GLTFLoader();
         loader.load(
@@ -111,15 +123,39 @@
             (gltf) => {
                 model = gltf.scene;
 
-                // Enable shadows on all meshes
+                // Traverse model to find bones and meshes
                 model.traverse((child) => {
                     if (child.isMesh) {
                         child.castShadow = true;
                         child.receiveShadow = true;
+                        // Hide the original mesh since it's invisible anyway
+                        child.visible = false;
+                    }
+                    // Create spheres for bones/joints
+                    if (child.isBone || child.type === 'Bone') {
+                        joints.push(child);
+                        const sphere = new THREE.Mesh(jointGeometry, jointMaterial);
+                        sphere.castShadow = true;
+                        jointSpheres.push(sphere);
+                        scene.add(sphere);
                     }
                 });
 
+                // If no bones found, try creating spheres for all objects with names suggesting joints
+                if (joints.length === 0) {
+                    model.traverse((child) => {
+                        if (child.isObject3D && child.name && child !== model) {
+                            joints.push(child);
+                            const sphere = new THREE.Mesh(jointGeometry, jointMaterial);
+                            sphere.castShadow = true;
+                            jointSpheres.push(sphere);
+                            scene.add(sphere);
+                        }
+                    });
+                }
+
                 scene.add(model);
+                console.log(`Found ${joints.length} joints`);
 
                 // Setup animation mixer if animations exist
                 if (gltf.animations && gltf.animations.length > 0) {
@@ -129,12 +165,12 @@
 
                     document.getElementById('info').innerHTML =
                         `SecondHandPlayer<br>` +
-                        `Model loaded: Loops1_export.glb<br>` +
+                        `Joints: ${joints.length}<br>` +
                         `Animations: ${gltf.animations.length}`;
                 } else {
                     document.getElementById('info').innerHTML =
                         `SecondHandPlayer<br>` +
-                        `Model loaded: Loops1_export.glb<br>` +
+                        `Joints: ${joints.length}<br>` +
                         `No animations found`;
                 }
 
@@ -155,6 +191,8 @@
         // Animation loop
         const clock = new THREE.Clock();
 
+        const worldPos = new THREE.Vector3();
+
         function animate() {
             requestAnimationFrame(animate);
 
@@ -162,6 +200,12 @@
 
             if (mixer) {
                 mixer.update(delta);
+            }
+
+            // Update joint sphere positions to follow bones
+            for (let i = 0; i < joints.length; i++) {
+                joints[i].getWorldPosition(worldPos);
+                jointSpheres[i].position.copy(worldPos);
             }
 
             controls.update();
